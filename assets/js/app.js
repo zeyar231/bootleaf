@@ -1,4 +1,4 @@
-var map, featureList, boroughSearch = [], theaterSearch = [], museumSearch = [];
+var map, featureList, theaterSearch = [], museumSearch = [];
 
 $(window).resize(function() {
   sizeLayerControl();
@@ -17,11 +17,11 @@ if ( !("ontouchstart" in window) ) {
 
 $(document).on("mouseout", ".feature-row", clearHighlight);
 
-$("#about-btn").click(function() {
-  $("#aboutModal").modal("show");
-  $(".navbar-collapse.in").collapse("hide");
-  return false;
-});
+// $("#about-btn").click(function() {
+//   $("#aboutModal").modal("show");
+//   $(".navbar-collapse.in").collapse("hide");
+//   return false;
+// });
 
 $("#full-extent-btn").click(function() {
   map.fitBounds(boroughs.getBounds());
@@ -29,17 +29,17 @@ $("#full-extent-btn").click(function() {
   return false;
 });
 
-$("#legend-btn").click(function() {
-  $("#legendModal").modal("show");
-  $(".navbar-collapse.in").collapse("hide");
-  return false;
-});
+// $("#legend-btn").click(function() {
+//   $("#legendModal").modal("show");
+//   $(".navbar-collapse.in").collapse("hide");
+//   return false;
+// });
 
-$("#login-btn").click(function() {
-  $("#loginModal").modal("show");
-  $(".navbar-collapse.in").collapse("hide");
-  return false;
-});
+// $("#login-btn").click(function() {
+//   $("#loginModal").modal("show");
+//   $(".navbar-collapse.in").collapse("hide");
+//   return false;
+// });
 
 $("#list-btn").click(function() {
   animateSidebar();
